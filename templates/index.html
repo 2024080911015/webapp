@@ -18,7 +18,10 @@
   <!-- 正文 -->
   <main id="app" class="app hidden">
     <h1>主页内容</h1>
-    <p>这里是你的网站。</p>
+    <p>
+    这里是你的网站：
+    <a href="{{ url_for('hello') }}">{{ url_for('hello') }}</a>  <!-- 链接到 /hello 路由flask自动生成 -->
+    </p>
   </main>
 
   <script src="{{ url_for('static', filename='js/splash.js') }}"></script>

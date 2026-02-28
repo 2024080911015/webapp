@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Hello Fullscreen</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      overflow: hidden;
+    }
+
+    /* 全屏容器 */
+    .fullscreen {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      background: #000;
+    }
+
+    /* 全屏图片 */
+    .fullscreen img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;     /* 铺满屏幕（会裁切） */
+      object-position: center;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="fullscreen">
+    <img src="{{ url_for('static', filename='img/hello.jpg') }}" alt="hello image">
+  </div>
+</body>
+</html>

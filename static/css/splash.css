@@ -21,7 +21,7 @@ body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Arial; }
 .logo{ width: 96px; height: 96px; margin-bottom: 16px; }
 .splash-bg{
   background-image: url("/static/img/logo.jpg"); /* 或 png */
-  background-size: cover;      /* 关键：铺满 */
+  background-size: contain;      /* 关键：铺满 */
   background-position: center; /* 居中裁切 */
   background-repeat: no-repeat;
 }
