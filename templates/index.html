@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Site</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/splash.css') }}">
+</head>
+<body>
+  <!-- 开屏层 -->
+    <div id="splash" class="splash splash-bg">
+    <div class="overlay">
+        <div class="spinner"></div>
+        <div class="tip">加载中…</div>
+    </div>
+    </div>
+
+  <!-- 正文 -->
+  <main id="app" class="app hidden">
+    <h1>主页内容</h1>
+    <p>这里是你的网站。</p>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/splash.js') }}"></script>
+</body>
+</html>
